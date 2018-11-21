@@ -6,6 +6,7 @@ import "react-router-modal/css/react-router-modal.css";
 import { isAuthenticated } from "./services/auth";
 
 import SignUp from "./pages/SignUp";
+import Teams from "./pages/Teams";
 import SignIn from "./pages/SignIn";
 import App from "./pages/App";
 
@@ -28,6 +29,7 @@ const Routes = () => (
       <Switch>
         <Route exact path="/" component={SignIn} />
         <Route path="/signup" component={SignUp} />
+        <Route path="/teams" component={Teams} />
         <PrivateRoute path="/app" component={App} />
         <Route path="*" component={() => <h1>Page not found</h1>} />
       </Switch>
